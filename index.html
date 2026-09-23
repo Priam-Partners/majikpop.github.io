@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#1B5C6B" />
+  <meta name="google-site-verification" content="KSe63nCpzMNgLuSvFUwi4duw0buvBSrkegEMkRVE4Wo" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Priam Partners" />
   <meta property="og:locale" content="fr_FR" />
@@ -274,17 +275,18 @@
     .cal-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 20px;
-      padding: 12px 22px;
+      gap: 12px;
+      margin-top: 0;
+      padding: 18px 30px;
       background: var(--teal);
       color: #fff;
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 12.5px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
+      box-shadow: 0 10px 28px rgba(27,92,107,0.22);
       cursor: pointer;
       transition: background .2s ease, transform .2s ease;
       position: relative;
@@ -305,6 +307,23 @@
       transition: transform .25s cubic-bezier(.2,.7,.3,1);
     }
     .cal-btn:hover .cal-arrow { transform: translateX(4px); }
+
+    .alt-contact {
+      margin-top: 22px;
+      font-size: 14px;
+      color: var(--mute);
+    }
+    .alt-contact .mail-link {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal3);
+      margin-left: 4px;
+      transition: color .2s, border-color .2s;
+    }
+    .alt-contact .mail-link:hover { color: var(--teal); border-color: var(--teal); }
 
     /* Visual side — monumental blason + typographic crest */
     .visual {
@@ -451,18 +470,15 @@
         <div class="rule rise d4"></div>
 
         <div class="rise d5">
-          <div class="contact-label" data-i18n="contactLabel">Nous écrire</div>
-          <a class="mailto" href="#" data-c="mail" data-subject="Prise de contact — Priam Partners" data-i18n-subject="subject">
-            <span data-c-text="mail">f.pessot (arobase) priamandco.com</span>
-            <span class="arrow">→</span>
-          </a>
-          <div class="note" data-i18n="note">
-            Chaque message reçoit une réponse personnelle.
-          </div>
           <a class="cal-btn" href="https://cal.eu/fabien-pessot" target="_blank" rel="noopener">
             <span data-i18n="calLabel">Prendre rendez-vous</span>
             <span class="cal-arrow">→</span>
           </a>
+          <div class="note" data-i18n="calNote">Choisissez directement un créneau dans l'agenda.</div>
+          <div class="alt-contact">
+            <span data-i18n="orWrite">Ou écrire à</span>
+            <a class="mail-link" href="#" data-c="mail" data-subject="Prise de contact — Priam Partners" data-i18n-subject="subject"><span data-c-text="mail">f.pessot (arobase) priamandco.com</span></a>
+          </div>
         </div>
       </section>
 
@@ -519,6 +535,7 @@
             tag1: 'Conseil', tag2: 'Investissement', tag3: 'Transmission', tag4: 'Gouvernance',
             copyright: '© MMXVII–MMXXVI Priam Partners · Lille',
             calLabel: 'Prendre rendez-vous',
+            calNote: "Choisissez directement un créneau dans l'agenda.", orWrite: 'Ou écrire à',
             legal: 'Mentions légales', privacy: 'Confidentialité'
           },
           en: {
@@ -536,6 +553,7 @@
             tag1: 'Advisory', tag2: 'Investment', tag3: 'Succession', tag4: 'Governance',
             copyright: '© MMXVII–MMXXVI Priam Partners · Lille',
             calLabel: 'Book a meeting',
+            calNote: 'Pick a slot directly in the calendar.', orWrite: 'Or write to',
             legal: 'Legal notice', privacy: 'Privacy'
           }
         };
