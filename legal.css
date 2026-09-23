@@ -1,0 +1,24 @@
+:root{--bg:#F7F6F3;--ink:#0F2329;--teal:#1B5C6B;--mute:rgba(15,35,41,.62);--hair:rgba(15,35,41,.18);
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6}
+.band{position:fixed;left:0;top:0;bottom:0;width:10px;background:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(22px,5vw,48px) 64px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:clamp(36px,6vw,64px)}
+header a{display:inline-flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
+header img{width:36px;height:auto}
+header span{font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--teal)}
+h1{font-weight:500;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 8px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--teal)}
+h2{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin:40px 0 10px;padding-top:20px;border-top:1px solid var(--hair)}
+p,li{font-size:16px}ul{padding-left:20px}
+a{color:var(--teal)}
+.updated{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+dl{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:6px 20px;margin:0}
+dt{color:var(--mute);font-size:14px}dd{margin:0;font-size:15px}
+@media (max-width:560px){dl{grid-template-columns:1fr}dd{margin-bottom:8px}.band{width:6px}}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--hair);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+footer a{color:inherit;text-decoration:none;border-bottom:1px solid var(--hair)}
+.btn{display:inline-flex;gap:10px;margin-top:28px;padding:12px 22px;background:var(--teal);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none}
+.btn:hover{background:var(--ink)}
